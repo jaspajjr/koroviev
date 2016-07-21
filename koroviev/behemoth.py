@@ -18,6 +18,10 @@ class behemoth(object):
     def __init__(self, results_df):
         self.results_df = results_df
         self.model = None
+        self.coeff_df = None
+        self.rho = None
+        self.gamma = None
+
 
 
     def train_model(self):
@@ -47,23 +51,25 @@ class behemoth(object):
 
         self.coeff_df
 
-    def get_rho(self):
+    def _get_rho(self):
         """
         Returns the rho parameter.
         """
         self.rho = 0.9
 
-    def get_gamma(self):
+    def _get_gamma(self):
         """
         Calculates the \gamma parameter.
         """
         self.gamma = np.mean(self.results_df['goals_scored_by_team']) / 2
 
+    def _equation(self):
+        """
+        The function for the 
+        """
+
     def predict(self, home_team, away_team):
         """
         Predicts the result of a game between the home team and the away_team.
         """
-
-
-    def read_results_df(self, results_df):
-        self.results_df = results_df
+        pass
