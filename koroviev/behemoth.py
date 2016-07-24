@@ -33,7 +33,9 @@ class behemoth(object):
             data=self.results_df,
             family=sm.families.Poisson())
 
-        self.model = model.fit()
+        model.fit()
+
+        self.model = model
 
     def find_coefficients_df(self):
         """
@@ -63,13 +65,15 @@ class behemoth(object):
         """
         self.gamma = np.mean(self.results_df['goals_scored_by_team']) / 2
 
-    def _equation(self):
+        '''
+        def _equation(self):
         """
-        The function for the 
+        The f(x) function to put parameters.
         """
+        self.'''
 
     def predict(self, home_team, away_team):
         """
         Predicts the result of a game between the home team and the away_team.
         """
-        pass
+        return 1
